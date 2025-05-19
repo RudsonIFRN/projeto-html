@@ -1,0 +1,66 @@
+/* style.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    font-size: 20px;
+    background-color: rgb(238, 246, 255);
+}
+
+/* Sidebar lateral */
+.sidebar {
+    width: 220px;
+    background-color: #171a38;
+    color: #ffffff;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar a {
+    display: block;
+    color: #ffffff;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #2a2d5a;
+}
+
+/* Tarja superior com logo centralizado */
+.header-bar {
+    width: 100%;
+    background-color: #171a38; /* mesma cor da sidebar */
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 220px; /* respeita a largura da sidebar */
+    height: 80px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Logo dentro da tarja */
+.header-bar img {
+    height: 60px;
+}
+
+/* Conteúdo principal */
+.content {
+    margin-left: 220px;
+    padding: 120px 20px 20px 20px; /* espaço extra no topo por causa da tarja */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* (Removido: .header original com texto) */
