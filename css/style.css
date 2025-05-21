@@ -1,25 +1,79 @@
-/* style.css */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-body {
+html, body {
+    height: 100%;
     margin: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
     display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
     background-color: rgb(238, 246, 255);
 }
 
-/* Sidebar lateral */
+li {
+    margin-bottom: 20px;
+}
+
+#toggleBtn {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 220px; /* borda direita da sidebar aberta */
+    width: 30px;
+    height: 60px;
+    background-color: #2a2d5a;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: left 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    z-index: 1200;
+}
+
+/* Quando a sidebar estiver oculta */
+.sidebar.hidden + #toggleBtn {
+    left: 0; /* botão fixo no canto esquerdo */
+}
+
+#toggleBtn.open::before {
+    content: '›'; /* seta para direita quando sidebar fechada */
+}
+
+#toggleBtn:not(.open)::before {
+    content: '‹'; /* seta para esquerda quando sidebar aberta */
+}
+
+#toggleBtn::before {
+    font-weight: bold;
+}
+
 .sidebar {
     width: 220px;
     background-color: #171a38;
     color: #ffffff;
     height: 100vh;
     position: fixed;
+    transition: transform 0.3s ease;
     left: 0;
     top: 0;
     padding-top: 20px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+/* Esconde a sidebar */
+.sidebar.hidden {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
 }
 
 .sidebar a {
@@ -34,7 +88,6 @@ body {
     background-color: #2a2d5a;
 }
 
-/* Tarja superior com logo centralizado */
 .header-bar {
     width: 100%;
     background-color: #171a38; /* mesma cor da sidebar */
@@ -48,19 +101,129 @@ body {
     height: 80px;
     box-sizing: border-box;
     z-index: 1000;
+    transition: left 0.3s ease;
 }
 
-/* Logo dentro da tarja */
+.header-bar a {
+    text-decoration: none;     /* remove sublinhado */
+    color: white;              /* ou a cor desejada */
+    font-size: 28px;           /* ajuste o tamanho conforme quiser */
+    font-weight: bold;         /* opcional, para destaque */
+    font-style: italic;
+}
+
+
+/* Ajusta a tarja quando a sidebar estiver oculta */
+.header-bar.expanded {
+    left: 0;
+}
+
 .header-bar img {
     height: 60px;
 }
 
-/* Conteúdo principal */
 .content {
+    flex: 1 0 auto; /* faz o conteúdo crescer e ocupar espaço disponível */
     margin-left: 220px;
     padding: 120px 20px 20px 20px; /* espaço extra no topo por causa da tarja */
-    width: 100%;
+    width: calc(100% -220px);
     box-sizing: border-box;
+    transition: margin-left 0.3s ease;
+    max-width: 1000px;
+    margin-right: 0 auto;
+    overflow: hidden;
 }
 
-/* (Removido: .header original com texto) */
+/* Footer fixo no fim da página */
+.footer {
+    flex-shrink: 0; /* impede o footer de encolher */
+    background-color: #171a38;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer p {
+    margin: 8px 0;
+}
+
+.footer .social-icons {
+    margin-top: 10px;
+}
+
+.footer .social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    color: white;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #00bfff;
+}
+
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    overflow-x: auto
+    padding-bottom: 20px
+}
+
+.plan-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    padding: 30px 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.plan-card h3 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #2a2d5a;
+}
+
+.plan-card .description {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.plan-card .features {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.plan-card .price {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #2a2d5a;
+}
+
+.subscribe-btn {
+    background-color: #2a2d5a;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.subscribe-btn:hover {
+    background-color: #3b3f70;
+}

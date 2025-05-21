@@ -1,24 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Sobre Nós - NTS</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-    <div class="sidebar">
+    <!-- Sidebar -->
+    <div class="sidebar" id="sidebar">
         <a href="/index.html">Início</a>
         <a href="/content/about.html">Sobre Nós</a>
+        <a href="/content/plans.html">Planos</a>
         <a href="/content/contact.html">Contato</a>
+        <a href="/content/team.html">Equipe</a>
     </div>
 
-    <div class="content">
-        <div class="header">
-            <a href="/index.html"><img src="/media/img/logo.png" alt="Logo NTS"></a>
-            <h1>Net Technology Solutions</h1>
-        </div>
+    <!-- Botão para ocultar/exibir a sidebar -->
+    <button id="toggleBtn" aria-label="Toggle Sidebar"></button>
+
+    <!-- Tarja no topo com o logo centralizado -->
+    <div class="header-bar" id="headerBar">
+        <a href="/index.html">
+            <h1>Net Tower Solutions &reg;</h1>
+        </a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="content" id="mainContent">
         <h2>Sobre Nós</h2>
         <p>A NTS foi fundada com a missão de conectar empresas às melhores soluções de rede do mercado. Com uma equipe altamente qualificada, atendemos clientes de pequeno, médio e grande porte com foco em qualidade, segurança e inovação.</p>
     </div>
+
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="footer-info">
+            <p><strong>Endereço:</strong> Av. nome da avenida, Natal RN</p>
+            <p><strong>Telefone:</strong> +55 (84) 3242 - 9999</p>
+            <p><strong>Email:</strong> <a href="mailto:ntsoluções@nts.com.br">contato@nts.com.br</a></p>
+            <p><strong>Siga-nos em nossas redes sociais:</strong></p>
+            <div class="social-icons">
+                <a href="https://facebook.com/rudson.amorim.837740" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/rudsong35" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@rudsong35" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script externo -->
+    <script src="/jscript/sidebar-toggle.js"></script>
 </body>
 </html>
