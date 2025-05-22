@@ -170,8 +170,8 @@ li {
     gap: 30px;
     flex-wrap: nowrap;
     margin-top: 40px;
-    overflow-x: auto
-    padding-bottom: 20px
+    overflow-x: auto;
+    padding-bottom: 20px;
 }
 
 .plan-card {
