@@ -2,14 +2,13 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
-    <base href="/projeto-html/">
+    <base href="/projeto-html">
     <link rel="icon" href="logo.ico" type="image/x-icon" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <title>Nosso planos - NTS</title>
 </head>
 <body>
-    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <a href="./">Início</a>
         <a href="about/">Sobre Nós</a>
@@ -18,17 +17,14 @@
         <a href="team/">Equipe</a>
     </div>
 
-    <!-- Botão para ocultar/exibir a sidebar -->
     <button id="toggleBtn" aria-label="Toggle Sidebar"></button>
 
-    <!-- Tarja no topo com o logo centralizado -->
     <div class="header-bar" id="headerBar">
         <a href="/">
             <h1>Net Tower Solutions &reg;</h1>
         </a>
     </div>
 
-    <!-- Conteúdo principal -->
     <main class="content" id="mainContent">
 <div class="plans-container">
     <div class="plan-card">
@@ -72,21 +68,37 @@
 </div>
     </main>
 
-    <!-- Rodapé -->
     <footer class="footer">
-        <p>Endereço: Av. nome da avenida, Natal RN</p>
-        <p>Telefone: +55 (84) 3242 - 9999</p>
-        <p>Email: <a href="mailto:ntsoluções@nts.com.br">ntsoluções@nts.com.br</a></p>
-        <p>Siga-nos em nossas redes sociais!</p>
-        <div class="social-icons">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+        <div class="footer-info">
+            <p>
+                <i class="fas fa-map"></i>
+                <strong>Endereço:</strong> Av. Sen. Salgado Filho, 1718 - Natal RN
+            </p>
+
+            <p>
+                <i class="fas fa-phone-alt"></i>
+                <strong>Telefone:</strong> +55 (84) 2023 - 2144
+            </p>
+
+            <p>
+                <i class="fas fa-envelope"></i>
+                <strong>Email:</strong> contato@ntsolutions.com.br
+            </p>
+
+            <p>
+                <strong>Siga-nos em nossas redes sociais:</strong>
+            </p>
+            
+            <div class="social-icons">
+                <a href="https://facebook.com/rudson.amorim.837740" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com/rudsong35" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://youtube.com/@rudsong35" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fas fa-envelope"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- Script externo para controle do botão -->
     <script src="sidebar-toggle.js"></script>
 </body>
 </html>

@@ -22,7 +22,7 @@ li {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-    left: 220px; /* borda direita da sidebar aberta */
+    left: 220px;
     width: 30px;
     height: 60px;
     background-color: #2a2d5a;
@@ -40,17 +40,16 @@ li {
     z-index: 1200;
 }
 
-/* Quando a sidebar estiver oculta */
 .sidebar.hidden + #toggleBtn {
-    left: 0; /* botão fixo no canto esquerdo */
+    left: 0;
 }
 
 #toggleBtn.open::before {
-    content: '›'; /* seta para direita quando sidebar fechada */
+    content: '›'; 
 }
 
 #toggleBtn:not(.open)::before {
-    content: '‹'; /* seta para esquerda quando sidebar aberta */
+    content: '‹';
 }
 
 #toggleBtn::before {
@@ -70,7 +69,6 @@ li {
     box-shadow: 2px 0 5px rgba(0,0,0,0.1);
 }
 
-/* Esconde a sidebar */
 .sidebar.hidden {
     transform: translateX(-100%);
     transition: transform 0.3s ease;
@@ -90,14 +88,14 @@ li {
 
 .header-bar {
     width: 100%;
-    background-color: #171a38; /* mesma cor da sidebar */
+    background-color: #171a38; 
     padding: 10px 0;
     display: flex;
     justify-content: center;
     align-items: center;
     position: fixed;
     top: 0;
-    left: 220px; /* respeita a largura da sidebar */
+    left: 220px; 
     height: 80px;
     box-sizing: border-box;
     z-index: 1000;
@@ -105,15 +103,14 @@ li {
 }
 
 .header-bar a {
-    text-decoration: none;     /* remove sublinhado */
-    color: white;              /* ou a cor desejada */
-    font-size: 28px;           /* ajuste o tamanho conforme quiser */
-    font-weight: bold;         /* opcional, para destaque */
+    text-decoration: none;     
+    color: white;              
+    font-size: 28px;
+    font-weight: bold;
     font-style: italic;
 }
 
 
-/* Ajusta a tarja quando a sidebar estiver oculta */
 .header-bar.expanded {
     left: 0;
 }
@@ -123,9 +120,9 @@ li {
 }
 
 .content {
-    flex: 1 0 auto; /* faz o conteúdo crescer e ocupar espaço disponível */
+    flex: 1 0 auto; 
     margin-left: 220px;
-    padding: 120px 20px 20px 20px; /* espaço extra no topo por causa da tarja */
+    padding: 120px 20px 20px 20px;
     width: calc(100% -220px);
     box-sizing: border-box;
     transition: margin-left 0.3s ease;
@@ -134,9 +131,8 @@ li {
     overflow: hidden;
 }
 
-/* Footer fixo no fim da página */
 .footer {
-    flex-shrink: 0; /* impede o footer de encolher */
+    flex-shrink: 0;
     background-color: #171a38;
     color: white;
     padding: 30px 20px;
@@ -172,6 +168,7 @@ li {
     margin-top: 40px;
     overflow-x: auto;
     padding-bottom: 20px;
+    align-items: ;
 }
 
 .plan-card {
