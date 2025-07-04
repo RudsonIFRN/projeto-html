@@ -278,3 +278,47 @@ li {
     color: #666;
     padding: 0 0.5rem;
 }
+
+.values-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 60px 20px;
+    background-color: #ffffff;
+    flex-wrap: wrap;
+}
+
+.value-card {
+    width: 300px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin: 10px;
+    text-align: left;
+}
+
+.value-card h3 {
+    color: #2a2d5a;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.value-card p {
+    font-size: 18px;
+    color: #303030;
+    margin-bottom: 15px;
+}
+.value-card ul {
+    font-size: 16px;
+    color: #ff0000;
+}
+
+.value-card ul {
+    padding-left: 20px;
+}
+
+.lema {
+    font-size: 30px;
+    padding-top: 50px;
+    padding-left: 80px;
+}
