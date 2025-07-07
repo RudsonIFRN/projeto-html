@@ -1,9 +1,8 @@
-x<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <base href="/projeto-html">
     <link rel="icon" href="logo.ico" type="image/logo.ico" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -11,25 +10,55 @@ x<!DOCTYPE html>
 </head>
 <body>
     <div class="sidebar" id="sidebar">
-        <a href="./">Início</a>
+        <a href="/projeto-html/">Início</a>
         <a href="about/">Sobre Nós</a>
         <a href="plans/">Planos</a>
-        <a href="contact/">Contato</a>
         <a href="team/">Equipe</a>
     </div>
 
     <button id="toggleBtn" aria-label="Toggle Sidebar"></button>
 
     <div class="header-bar" id="headerBar">
-        <a href="/">
-            <h1>Net Technology Solutions &reg;</h1>
+        <a href="./">
+            <h1>Soluções, serviços e sonhos</h1>
         </a>
     </div>
 
-    <div class="lema">
-        <h2>Conectando você ao futuro da tecnologia!</h2>
+<section class="banner-section">
+    <div class="banner-frame">
+        <img src="banner.png" alt="Banner Promocional" />    </div>
+</section>
 
-    <div class="values-section">
+<section class="news-section">
+  <h2>Novidades</h2>
+  <div class="news-carousel-container">
+    <div class="news-carousel">
+      <a href="#">
+        <div class="news-item">
+          <div class="image-wrapper legacy-ratio">
+            <img src="noticia1.png" alt="Notícia 1" />
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="news-item">
+          <div class="image-wrapper legacy-ratio">
+            <img src="noticia2.png" alt="Notícia 2" />
+          </div>
+        </div>
+      </a>
+      <a href="#">
+        <div class="news-item">
+          <div class="image-wrapper legacy-ratio">
+            <img src="noticia2.png" alt="Notícia 3" />
+          </div>
+        </div>  
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="values-section">
     <div class="value-card">
         <h3>Missão</h3>
         <p>Oferecer soluções eficientes e confiáveis, garantindo a estabilidade da TI e segurança da informação.</p>
@@ -42,40 +71,25 @@ x<!DOCTYPE html>
         <h3>Valores</h3>
         <p>Compromisso com a qualidade, ética, inovação e respeito ao cliente e à sociedade.</p>
     </div>
-    </div>
+</div>
 
-
-    <footer class="footer">
-        <div class="footer-info">
-            <p>
-                <i class="fas fa-map"></i>
-                <strong>Endereço:</strong> Av. Sen. Salgado Filho, 1718 - Natal RN
-            </p>
-
-            <p>
-                <i class="fas fa-phone-alt"></i>
-                <strong>Telefone:</strong> +55 (84) 2023 - 2144
-            </p>
-
-            <p>
-                <i class="fas fa-envelope"></i>
-                <strong>Email:</strong> contato@ntsolutions.com.br
-            </p>
-
-            <p>
-                <strong>Siga-nos em nossas redes sociais:</strong>
-            </p>
-            
-            <div class="social-icons">
-                <a href="https://facebook.com/rudson.amorim.837740" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                <a href="https://instagram.com/rudsong35" target="_blank"><i class="fab fa-instagram"></i></a>
-                <a href="https://youtube.com/@rudsong35" target="_blank"><i class="fab fa-youtube"></i></a>
-                <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fas fa-envelope"></i></a>
-            </div>
+<footer class="footer">
+    <div class="footer-info">
+        <p><i class="fas fa-map"></i> <strong>Endereço:</strong> Av. Sen. Salgado Filho, 1718 - Natal RN</p>
+        <p><i class="fas fa-phone-alt"></i> <strong>Telefone:</strong> +55 (84) 2023 - 2144</p>
+        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> suporte@nts.com.br</p>
+        <p><strong>Siga-nos em nossas redes sociais:</strong></p>
+        <div class="social-icons">
+            <a href="https://facebook.com/rudson.amorim.837740" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/rudsong35" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://youtube.com/@rudsong35" target="_blank"><i class="fab fa-youtube"></i></a>
+            <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://linkedin.com/in/rudson-amorim" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <script src="sidebar-toggle.js"></script>
+<script src="sidebar-toggle.js"></script>
+<script src="news-carousel.js"></script>
 </body>
 </html>
